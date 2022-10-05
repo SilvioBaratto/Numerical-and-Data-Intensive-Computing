@@ -1,0 +1,132 @@
+Mul1 O1
+
+CPU = 1398.661987 ms Mul1 
+
+ Performance counter stats for './task2':
+
+    12,422,217,580      cycles:u                                                      (33.39%)
+    16,110,719,318      instructions:u            #    1.30  insn per cycle           (44.58%)
+     6,023,561,148      L1-dcache-loads                                               (55.75%)
+     2,108,829,418      L1-dcache-load-misses     #   35.01% of all L1-dcache accesses  (66.82%)
+     2,016,690,257      L1-dcache-stores                                              (66.83%)
+   <not supported>      L1-dcache-store-misses                                      
+         1,235,733      LLC-loads                                                     (66.84%)
+             4,266      LLC-load-misses           #    0.35% of all LL-cache accesses  (44.25%)
+            63,102      LLC-stores                                                    (22.09%)
+             1,198      LLC-store-misses                                              (22.12%)
+
+       2.822894092 seconds time elapsed
+
+       2.810171000 seconds user
+       0.003997000 seconds sys
+
+Mul1 02
+
+CPU = 655.932007 ms Mul1 
+
+ Performance counter stats for './task2':
+
+     6,065,174,592      cycles:u                                                      (33.25%)
+    18,111,358,969      instructions:u            #    2.99  insn per cycle           (44.57%)
+     4,031,509,126      L1-dcache-loads                                               (55.85%)
+     2,034,376,280      L1-dcache-load-misses     #   50.46% of all L1-dcache accesses  (66.88%)
+     2,017,118,230      L1-dcache-stores                                              (66.88%)
+   <not supported>      L1-dcache-store-misses                                      
+           708,795      LLC-loads                                                     (66.89%)
+             3,761      LLC-load-misses           #    0.53% of all LL-cache accesses  (44.15%)
+           429,307      LLC-stores                                                    (22.08%)
+            53,142      LLC-store-misses                                              (22.07%)
+
+       1.413953736 seconds time elapsed
+
+       1.409785000 seconds user
+       0.004005000 seconds sys
+
+Mul1 03
+
+CPU = 661.276978 ms Mul1 
+
+ Performance counter stats for './task2':
+
+     6,072,215,336      cycles:u                                                      (33.10%)
+    18,142,424,665      instructions:u            #    2.99  insn per cycle           (44.36%)
+     4,019,638,216      L1-dcache-loads                                               (55.90%)
+     2,028,160,984      L1-dcache-load-misses     #   50.46% of all L1-dcache accesses  (67.06%)
+     2,015,601,756      L1-dcache-stores                                              (67.05%)
+   <not supported>      L1-dcache-store-misses                                      
+         1,297,889      LLC-loads                                                     (67.06%)
+             1,154      LLC-load-misses           #    0.09% of all LL-cache accesses  (44.10%)
+           492,185      LLC-stores                                                    (21.96%)
+            48,418      LLC-store-misses                                              (21.97%)
+
+       1.385262383 seconds time elapsed
+
+       1.381173000 seconds user
+       0.000000000 seconds sys
+
+Mul2 O1
+
+CPU = 1337.573975 ms Mul1 
+
+ Performance counter stats for './task2':
+
+    12,544,623,274      cycles:u                                                      (33.34%)
+    16,138,999,855      instructions:u            #    1.29  insn per cycle           (44.54%)
+     6,024,214,777      L1-dcache-loads                                               (55.70%)
+     2,107,005,071      L1-dcache-load-misses     #   34.98% of all L1-dcache accesses  (66.76%)
+     2,013,602,458      L1-dcache-stores                                              (66.74%)
+   <not supported>      L1-dcache-store-misses                                      
+           964,499      LLC-loads                                                     (66.77%)
+             4,482      LLC-load-misses           #    0.46% of all LL-cache accesses  (44.30%)
+            41,422      LLC-stores                                                    (22.16%)
+               487      LLC-store-misses                                              (22.16%)
+
+       2.816842918 seconds time elapsed
+
+       2.816134000 seconds user
+       0.000000000 seconds sys
+
+Mul2 02
+
+CPU = 664.648987 ms Mul1 
+
+ Performance counter stats for './task2':
+
+     6,148,114,191      cycles:u                                                      (33.03%)
+    18,299,920,676      instructions:u            #    2.98  insn per cycle           (44.29%)
+     4,060,471,919      L1-dcache-loads                                               (55.58%)
+     2,035,551,933      L1-dcache-load-misses     #   50.13% of all L1-dcache accesses  (66.82%)
+     2,010,732,108      L1-dcache-stores                                              (67.10%)
+   <not supported>      L1-dcache-store-misses                                      
+           563,053      LLC-loads                                                     (67.10%)
+             4,433      LLC-load-misses           #    0.79% of all LL-cache accesses  (44.42%)
+           468,321      LLC-stores                                                    (21.93%)
+            65,307      LLC-store-misses                                              (21.93%)
+
+       1.350588624 seconds time elapsed
+
+       1.346580000 seconds user
+       0.004007000 seconds sys
+
+
+Mul3 O3
+
+CPU = 649.606018 ms Mul1 
+
+ Performance counter stats for './task2':
+
+     6,063,899,691      cycles:u                                                      (33.10%)
+    18,194,757,024      instructions:u            #    3.00  insn per cycle           (44.25%)
+     4,043,260,221      L1-dcache-loads                                               (55.40%)
+     2,033,381,316      L1-dcache-load-misses     #   50.29% of all L1-dcache accesses  (66.55%)
+     2,016,270,899      L1-dcache-stores                                              (66.54%)
+   <not supported>      L1-dcache-store-misses                                      
+           933,627      LLC-loads                                                     (66.74%)
+             1,856      LLC-load-misses           #    0.20% of all LL-cache accesses  (44.60%)
+           449,312      LLC-stores                                                    (22.30%)
+            60,033      LLC-store-misses                                              (22.11%)
+
+       1.328076453 seconds time elapsed
+
+       1.323980000 seconds user
+       0.003999000 seconds sys
