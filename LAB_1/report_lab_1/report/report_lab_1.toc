@@ -1,0 +1,11 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {section}{\numberline {1}PERF (I)}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Definition profiler}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Code explanatin for benchmarking}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Performance analysis tool (perf)}{2}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Conclusion}{3}{subsection.1.4}%
+\contentsline {section}{\numberline {2}PERF (II)}{4}{section.2}%
+\contentsline {section}{\numberline {3}GPROF}{5}{section.3}%
+\contentsline {section}{\numberline {4}OpenMP (Compilation and basic directives)}{6}{section.4}%
+\contentsline {section}{\numberline {5}Optional assignment}{7}{section.5}%
