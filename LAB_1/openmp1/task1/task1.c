@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <omp.h>
 
-#define NUM_THREADS	2
+#define NUM_THREADS	1
 #define ITERATIONS	2000000000 / NUM_THREADS
 
 

@@ -1,0 +1,321 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 22.09      0.19     0.19 234249700     0.00     0.00  BMP_Read_Gray_Pixel
+  9.30      0.27     0.08 103980960     0.00     0.00  BMP_Write_Gray_Pixel
+  9.30      0.35     0.08 51966720     0.00     0.00  BMP_Read_Color_Pixel
+  9.30      0.43     0.08                             _init
+  8.14      0.50     0.07        1    70.00    90.54  Label_Binary_Image
+  6.98      0.56     0.06 13014556     0.00     0.00  BMP_Write_Color_Pixel
+  6.98      0.62     0.06        2    30.00    30.00  BMP_Read_Color_Image
+  6.98      0.68     0.06        1    60.00   173.39  Binary_Dilation
+  5.81      0.73     0.05        7     7.14     7.14  BMP_Create_Gray_Image
+  3.49      0.76     0.03        3    10.00    30.53  Binarize_Gray_Image
+  3.49      0.79     0.03        2    15.00    15.00  BMP_Write_Gray_Image
+  3.49      0.82     0.03        1    30.00    61.07  Or_Gray_Images
+  1.16      0.83     0.01 12991680     0.00     0.00  Read_Label
+  1.16      0.84     0.01   296827     0.00     0.00  Update_Lookup
+  1.16      0.85     0.01        2     5.00    35.00  Color_Image_to_Gray
+  1.16      0.86     0.01        1    10.00    10.00  BMP_Write_Color_Image
+  0.00      0.86     0.00  1187308     0.00     0.00  Minimum_Label_Neighbor
+  0.00      0.86     0.00  1187308     0.00     0.00  Update_Lookup_Neighbor
+  0.00      0.86     0.00   296827     0.00     0.00  Label_Pixel
+  0.00      0.86     0.00   296827     0.00     0.00  Minimum_Label
+  0.00      0.86     0.00        7     0.00     0.00  BMP_Free_Gray_Image
+  0.00      0.86     0.00        3     0.00     0.00  BMP_Free_Color_Image
+  0.00      0.86     0.00        1     0.00    99.89  Add_Color_Images
+  0.00      0.86     0.00        1     0.00     0.00  BMP_Create_Color_Image
+  0.00      0.86     0.00        1     0.00   213.67  Binary_Closing
+  0.00      0.86     0.00        1     0.00    33.13  Binary_Erosion
+  0.00      0.86     0.00        1     0.00     0.00  Create_Label_Array
+  0.00      0.86     0.00        1     0.00     0.00  Destroy_Label_Array
+  0.00      0.86     0.00        1     0.00     0.00  Readjust_Lookup
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2022 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 4 byte(s) for 1.16% of 0.86 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     90.7    0.00    0.78                 main [1]
+                0.00    0.21       1/1           Binary_Closing [2]
+                0.00    0.10       1/1           Add_Color_Images [5]
+                0.03    0.06       3/3           Binarize_Gray_Image [6]
+                0.07    0.02       1/1           Label_Binary_Image [7]
+                0.01    0.06       2/2           Color_Image_to_Gray [11]
+                0.03    0.03       1/1           Or_Gray_Images [12]
+                0.06    0.00       2/2           BMP_Read_Color_Image [14]
+                0.04    0.00       6/7           BMP_Create_Gray_Image [15]
+                0.03    0.00       2/2           BMP_Write_Gray_Image [17]
+                0.01    0.00 12991680/12991680     Read_Label [18]
+                0.01    0.00       1/1           BMP_Write_Color_Image [20]
+                0.00    0.00  341352/234249700     BMP_Read_Gray_Pixel [3]
+                0.00    0.00   22876/13014556     BMP_Write_Color_Pixel [13]
+                0.00    0.00       6/7           BMP_Free_Gray_Image [25]
+                0.00    0.00       3/3           BMP_Free_Color_Image [26]
+                0.00    0.00       1/1           BMP_Create_Color_Image [27]
+                0.00    0.00       1/1           Create_Label_Array [28]
+                0.00    0.00       1/1           Destroy_Label_Array [29]
+-----------------------------------------------
+                0.00    0.21       1/1           main [1]
+[2]     24.8    0.00    0.21       1         Binary_Closing [2]
+                0.06    0.11       1/1           Binary_Dilation [4]
+                0.00    0.03       1/1           Binary_Erosion [16]
+                0.01    0.00       1/7           BMP_Create_Gray_Image [15]
+                0.00    0.00       1/7           BMP_Free_Gray_Image [25]
+-----------------------------------------------
+                0.00    0.00  341352/234249700     main [1]
+                0.01    0.00 12991680/234249700     Label_Binary_Image [7]
+                0.02    0.00 25983360/234249700     Or_Gray_Images [12]
+                0.02    0.00 28500476/234249700     Binary_Erosion [16]
+                0.03    0.00 38975040/234249700     Binarize_Gray_Image [6]
+                0.10    0.00 127457792/234249700     Binary_Dilation [4]
+[3]     22.1    0.19    0.00 234249700         BMP_Read_Gray_Pixel [3]
+-----------------------------------------------
+                0.06    0.11       1/1           Binary_Closing [2]
+[4]     20.2    0.06    0.11       1         Binary_Dilation [4]
+                0.10    0.00 127457792/234249700     BMP_Read_Gray_Pixel [3]
+                0.01    0.00 13015693/103980960     BMP_Write_Gray_Pixel [8]
+-----------------------------------------------
+                0.00    0.10       1/1           main [1]
+[5]     11.6    0.00    0.10       1         Add_Color_Images [5]
+                0.06    0.00 12991680/13014556     BMP_Write_Color_Pixel [13]
+                0.04    0.00 25983360/51966720     BMP_Read_Color_Pixel [9]
+-----------------------------------------------
+                0.03    0.06       3/3           main [1]
+[6]     10.7    0.03    0.06       3         Binarize_Gray_Image [6]
+                0.03    0.00 38975040/234249700     BMP_Read_Gray_Pixel [3]
+                0.03    0.00 38975040/103980960     BMP_Write_Gray_Pixel [8]
+-----------------------------------------------
+                0.07    0.02       1/1           main [1]
+[7]     10.5    0.07    0.02       1         Label_Binary_Image [7]
+                0.01    0.00 12991680/234249700     BMP_Read_Gray_Pixel [3]
+                0.01    0.00  296827/296827      Update_Lookup [19]
+                0.00    0.00  296827/1187308     Update_Lookup_Neighbor [22]
+                0.00    0.00  296827/296827      Label_Pixel [23]
+                0.00    0.00       1/1           Readjust_Lookup [30]
+-----------------------------------------------
+                0.01    0.00 12991680/103980960     Or_Gray_Images [12]
+                0.01    0.00 13015187/103980960     Binary_Erosion [16]
+                0.01    0.00 13015693/103980960     Binary_Dilation [4]
+                0.02    0.00 25983360/103980960     Color_Image_to_Gray [11]
+                0.03    0.00 38975040/103980960     Binarize_Gray_Image [6]
+[8]      9.3    0.08    0.00 103980960         BMP_Write_Gray_Pixel [8]
+-----------------------------------------------
+                0.04    0.00 25983360/51966720     Add_Color_Images [5]
+                0.04    0.00 25983360/51966720     Color_Image_to_Gray [11]
+[9]      9.3    0.08    0.00 51966720         BMP_Read_Color_Pixel [9]
+-----------------------------------------------
+                                                 <spontaneous>
+[10]     9.3    0.08    0.00                 _init [10]
+-----------------------------------------------
+                0.01    0.06       2/2           main [1]
+[11]     8.1    0.01    0.06       2         Color_Image_to_Gray [11]
+                0.04    0.00 25983360/51966720     BMP_Read_Color_Pixel [9]
+                0.02    0.00 25983360/103980960     BMP_Write_Gray_Pixel [8]
+-----------------------------------------------
+                0.03    0.03       1/1           main [1]
+[12]     7.1    0.03    0.03       1         Or_Gray_Images [12]
+                0.02    0.00 25983360/234249700     BMP_Read_Gray_Pixel [3]
+                0.01    0.00 12991680/103980960     BMP_Write_Gray_Pixel [8]
+-----------------------------------------------
+                0.00    0.00   22876/13014556     main [1]
+                0.06    0.00 12991680/13014556     Add_Color_Images [5]
+[13]     7.0    0.06    0.00 13014556         BMP_Write_Color_Pixel [13]
+-----------------------------------------------
+                0.06    0.00       2/2           main [1]
+[14]     7.0    0.06    0.00       2         BMP_Read_Color_Image [14]
+-----------------------------------------------
+                0.01    0.00       1/7           Binary_Closing [2]
+                0.04    0.00       6/7           main [1]
+[15]     5.8    0.05    0.00       7         BMP_Create_Gray_Image [15]
+-----------------------------------------------
+                0.00    0.03       1/1           Binary_Closing [2]
+[16]     3.9    0.00    0.03       1         Binary_Erosion [16]
+                0.02    0.00 28500476/234249700     BMP_Read_Gray_Pixel [3]
+                0.01    0.00 13015187/103980960     BMP_Write_Gray_Pixel [8]
+-----------------------------------------------
+                0.03    0.00       2/2           main [1]
+[17]     3.5    0.03    0.00       2         BMP_Write_Gray_Image [17]
+-----------------------------------------------
+                0.01    0.00 12991680/12991680     main [1]
+[18]     1.2    0.01    0.00 12991680         Read_Label [18]
+-----------------------------------------------
+                0.01    0.00  296827/296827      Label_Binary_Image [7]
+[19]     1.2    0.01    0.00  296827         Update_Lookup [19]
+                0.00    0.00  890481/1187308     Update_Lookup_Neighbor [22]
+-----------------------------------------------
+                0.01    0.00       1/1           main [1]
+[20]     1.2    0.01    0.00       1         BMP_Write_Color_Image [20]
+-----------------------------------------------
+                0.00    0.00 1187308/1187308     Minimum_Label [24]
+[21]     0.0    0.00    0.00 1187308         Minimum_Label_Neighbor [21]
+-----------------------------------------------
+                0.00    0.00  296827/1187308     Label_Binary_Image [7]
+                0.00    0.00  890481/1187308     Update_Lookup [19]
+[22]     0.0    0.00    0.00 1187308         Update_Lookup_Neighbor [22]
+-----------------------------------------------
+                0.00    0.00  296827/296827      Label_Binary_Image [7]
+[23]     0.0    0.00    0.00  296827         Label_Pixel [23]
+                0.00    0.00  296827/296827      Minimum_Label [24]
+-----------------------------------------------
+                0.00    0.00  296827/296827      Label_Pixel [23]
+[24]     0.0    0.00    0.00  296827         Minimum_Label [24]
+                0.00    0.00 1187308/1187308     Minimum_Label_Neighbor [21]
+-----------------------------------------------
+                0.00    0.00       1/7           Binary_Closing [2]
+                0.00    0.00       6/7           main [1]
+[25]     0.0    0.00    0.00       7         BMP_Free_Gray_Image [25]
+-----------------------------------------------
+                0.00    0.00       3/3           main [1]
+[26]     0.0    0.00    0.00       3         BMP_Free_Color_Image [26]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[27]     0.0    0.00    0.00       1         BMP_Create_Color_Image [27]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[28]     0.0    0.00    0.00       1         Create_Label_Array [28]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[29]     0.0    0.00    0.00       1         Destroy_Label_Array [29]
+-----------------------------------------------
+                0.00    0.00       1/1           Label_Binary_Image [7]
+[30]     0.0    0.00    0.00       1         Readjust_Lookup [30]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2022 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+   [5] Add_Color_Images       [17] BMP_Write_Gray_Image   [23] Label_Pixel
+  [27] BMP_Create_Color_Image  [8] BMP_Write_Gray_Pixel   [24] Minimum_Label
+  [15] BMP_Create_Gray_Image   [6] Binarize_Gray_Image    [21] Minimum_Label_Neighbor
+  [26] BMP_Free_Color_Image    [2] Binary_Closing         [12] Or_Gray_Images
+  [25] BMP_Free_Gray_Image     [4] Binary_Dilation        [18] Read_Label
+  [14] BMP_Read_Color_Image   [16] Binary_Erosion         [30] Readjust_Lookup
+   [9] BMP_Read_Color_Pixel   [11] Color_Image_to_Gray    [19] Update_Lookup
+   [3] BMP_Read_Gray_Pixel    [28] Create_Label_Array     [22] Update_Lookup_Neighbor
+  [20] BMP_Write_Color_Image  [29] Destroy_Label_Array    [10] _init
+  [13] BMP_Write_Color_Pixel   [7] Label_Binary_Image

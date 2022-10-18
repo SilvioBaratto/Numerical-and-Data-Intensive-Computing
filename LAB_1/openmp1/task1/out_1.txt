@@ -1,0 +1,50 @@
+--> 1 threads before omp parallel.
+Thread # 0 out of 1 threads
+End task 0 :: j 20000000 k 20000000.000000
+CPU time = 1001 ms 
+Wall time = 1000 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 1 threads
+End task 0 :: j 20000000 k 20000000.000000
+CPU time = 996 ms 
+Wall time = 996 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 1 threads
+End task 0 :: j 20000000 k 20000000.000000
+CPU time = 996 ms 
+Wall time = 996 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 1 threads
+End task 0 :: j 20000000 k 20000000.000000
+CPU time = 996 ms 
+Wall time = 995 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 1 threads
+End task 0 :: j 20000000 k 20000000.000000
+CPU time = 999 ms 
+Wall time = 999 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 1 threads
+End task 0 :: j 20000000 k 20000000.000000
+CPU time = 1034 ms 
+Wall time = 1033 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 1 threads
+End task 0 :: j 20000000 k 20000000.000000
+CPU time = 1058 ms 
+Wall time = 1057 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 1 threads
+End task 0 :: j 20000000 k 20000000.000000
+CPU time = 1002 ms 
+Wall time = 1001 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 1 threads
+End task 0 :: j 20000000 k 20000000.000000
+CPU time = 1008 ms 
+Wall time = 1007 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 1 threads
+End task 0 :: j 20000000 k 20000000.000000
+CPU time = 1030 ms 
+Wall time = 1030 ms

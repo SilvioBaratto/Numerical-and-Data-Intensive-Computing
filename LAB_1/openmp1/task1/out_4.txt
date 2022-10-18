@@ -1,0 +1,110 @@
+--> 1 threads before omp parallel.
+Thread # 0 out of 4 threads
+Thread # 3 out of 4 threads
+Thread # 1 out of 4 threads
+Thread # 2 out of 4 threads
+End task 1 :: j 5000000 k 5000000.000000
+End task 2 :: j 5000000 k 5000000.000000
+End task 3 :: j 5000000 k 5000000.000000
+End task 0 :: j 5000000 k 5000000.000000
+CPU time = 1301 ms 
+Wall time = 327 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 4 threads
+Thread # 2 out of 4 threads
+Thread # 1 out of 4 threads
+Thread # 3 out of 4 threads
+End task 0 :: j 5000000 k 5000000.000000
+End task 1 :: j 5000000 k 5000000.000000
+End task 3 :: j 5000000 k 5000000.000000
+End task 2 :: j 5000000 k 5000000.000000
+CPU time = 1340 ms 
+Wall time = 335 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 4 threads
+Thread # 2 out of 4 threads
+Thread # 1 out of 4 threads
+Thread # 3 out of 4 threads
+End task 0 :: j 5000000 k 5000000.000000
+End task 1 :: j 5000000 k 5000000.000000
+End task 2 :: j 5000000 k 5000000.000000
+End task 3 :: j 5000000 k 5000000.000000
+CPU time = 1299 ms 
+Wall time = 324 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 4 threads
+Thread # 2 out of 4 threads
+Thread # 1 out of 4 threads
+Thread # 3 out of 4 threads
+End task 0 :: j 5000000 k 5000000.000000
+End task 1 :: j 5000000 k 5000000.000000
+End task 3 :: j 5000000 k 5000000.000000
+End task 2 :: j 5000000 k 5000000.000000
+CPU time = 1319 ms 
+Wall time = 332 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 4 threads
+Thread # 3 out of 4 threads
+Thread # 2 out of 4 threads
+Thread # 1 out of 4 threads
+End task 3 :: j 5000000 k 5000000.000000
+End task 2 :: j 5000000 k 5000000.000000
+End task 1 :: j 5000000 k 5000000.000000
+End task 0 :: j 5000000 k 5000000.000000
+CPU time = 1337 ms 
+Wall time = 336 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 4 threads
+Thread # 3 out of 4 threads
+Thread # 2 out of 4 threads
+Thread # 1 out of 4 threads
+End task 2 :: j 5000000 k 5000000.000000
+End task 0 :: j 5000000 k 5000000.000000
+End task 1 :: j 5000000 k 5000000.000000
+End task 3 :: j 5000000 k 5000000.000000
+CPU time = 1304 ms 
+Wall time = 326 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 4 threads
+Thread # 1 out of 4 threads
+Thread # 3 out of 4 threads
+Thread # 2 out of 4 threads
+End task 0 :: j 5000000 k 5000000.000000
+End task 2 :: j 5000000 k 5000000.000000
+End task 1 :: j 5000000 k 5000000.000000
+End task 3 :: j 5000000 k 5000000.000000
+CPU time = 1300 ms 
+Wall time = 326 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 4 threads
+Thread # 3 out of 4 threads
+Thread # 2 out of 4 threads
+Thread # 1 out of 4 threads
+End task 2 :: j 5000000 k 5000000.000000
+End task 0 :: j 5000000 k 5000000.000000
+End task 1 :: j 5000000 k 5000000.000000
+End task 3 :: j 5000000 k 5000000.000000
+CPU time = 1298 ms 
+Wall time = 327 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 4 threads
+Thread # 3 out of 4 threads
+Thread # 1 out of 4 threads
+Thread # 2 out of 4 threads
+End task 1 :: j 5000000 k 5000000.000000
+End task 2 :: j 5000000 k 5000000.000000
+End task 3 :: j 5000000 k 5000000.000000
+End task 0 :: j 5000000 k 5000000.000000
+CPU time = 1302 ms 
+Wall time = 328 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 4 threads
+Thread # 1 out of 4 threads
+Thread # 3 out of 4 threads
+Thread # 2 out of 4 threads
+End task 0 :: j 5000000 k 5000000.000000
+End task 3 :: j 5000000 k 5000000.000000
+End task 1 :: j 5000000 k 5000000.000000
+End task 2 :: j 5000000 k 5000000.000000
+CPU time = 1306 ms 
+Wall time = 326 ms

@@ -3,7 +3,12 @@
 \usepackage{amsfonts}
 \usepackage{pdfpages}
 \usepackage{eurosym}
-
+\usepackage{pgfplots}
+\usepackage{authblk}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{float}
 \usepackage{listings}
 
 \usepackage{hyperref}
@@ -57,7 +62,7 @@
 \subsection{Definition profiler}
 A profiler in software engineering, is a form of dynamic program analysis that measures, for example, the space (memory) or time complexity of a program, the usage of particular instructions, or the frequency and duration of function calls. Most commonly, profiling information serves to aid program optimization, and more specifically, performance engineering. Profilers, which are also programs themselves, analyze target programs by collecting information on their execution. Based on their data granularity, on how profilers collect information, they are classified into event based or statistical profilers.\\
 \subsection{Code explanatin for benchmarking}
-The code given to do some performance analysis using perf as a profiler consist in a simple function that initialize a matrix of dimension $2000 x 2000$ and fill all the matrix with a value equal to $1$. The program repeat this operation $100$ times. 
+The code given to do some performance analysis using perf as a profiler consist in a simple function that initialize a matrix of dimension $2000 \times 2000$ and fill all the matrix with a value equal to $1$. The program repeat this operation $100$ times. 
 \subsection{Performance analysis tool (perf)}
 We are interested in see how the program behaves with different optimizers and code optimizations using perf to check the performance results. To do that with this instructions we want to look at:
 \begin{itemize}
@@ -125,14 +130,24 @@ CPU = 1.423880 ms
        0.135983000 seconds user
        0.007999000 seconds sys
 \end{lstlisting}
-From the graph below we can see how much changing to the row major perform better on cycles, instructions and cache 
+From the graph below we can see how much changing to the row major perform better on cycles, instructions and cache. 
 \subsection{Conclusion}
 \newpage
 \section{PERF (II)}
 \newpage
 \section{GPROF}
+\begin{itemize}
+\item[a] Functions with high "self ms/call" (shown in green) values and a big percentage of running time are considered our bottlenecks. The cannot be divided into smaller pieces and therefore not be parallelized.
+\item[b] In contrast, functions with low "self ms/call" (shown in blue) values and frequent calls are already divided up in small, very managable chunks and can therefore be parallelized. In this case we divide the matrices in chunks and loop over them seperately in parallel (for example domain decomposition).
+\end{itemize}
+\begin{center}
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{calls.png}
+\end{figure}
+\end{center}
 \newpage
 \section{OpenMP (Compilation and basic directives)}
+
 \newpage
 \section{Optional assignment}
 \end{document}

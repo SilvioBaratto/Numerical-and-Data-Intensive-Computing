@@ -1,0 +1,70 @@
+--> 1 threads before omp parallel.
+Thread # 0 out of 2 threads
+Thread # 1 out of 2 threads
+End task 0 :: j 10000000 k 10000000.000000
+End task 1 :: j 10000000 k 10000000.000000
+CPU time = 1047 ms 
+Wall time = 524 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 2 threads
+Thread # 1 out of 2 threads
+End task 1 :: j 10000000 k 10000000.000000
+End task 0 :: j 10000000 k 10000000.000000
+CPU time = 1078 ms 
+Wall time = 540 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 2 threads
+Thread # 1 out of 2 threads
+End task 1 :: j 10000000 k 10000000.000000
+End task 0 :: j 10000000 k 10000000.000000
+CPU time = 1106 ms 
+Wall time = 554 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 2 threads
+Thread # 1 out of 2 threads
+End task 0 :: j 10000000 k 10000000.000000
+End task 1 :: j 10000000 k 10000000.000000
+CPU time = 1084 ms 
+Wall time = 543 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 2 threads
+Thread # 1 out of 2 threads
+End task 1 :: j 10000000 k 10000000.000000
+End task 0 :: j 10000000 k 10000000.000000
+CPU time = 1066 ms 
+Wall time = 534 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 2 threads
+Thread # 1 out of 2 threads
+End task 1 :: j 10000000 k 10000000.000000
+End task 0 :: j 10000000 k 10000000.000000
+CPU time = 1084 ms 
+Wall time = 544 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 2 threads
+Thread # 1 out of 2 threads
+End task 0 :: j 10000000 k 10000000.000000
+End task 1 :: j 10000000 k 10000000.000000
+CPU time = 1081 ms 
+Wall time = 541 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 2 threads
+Thread # 1 out of 2 threads
+End task 1 :: j 10000000 k 10000000.000000
+End task 0 :: j 10000000 k 10000000.000000
+CPU time = 1080 ms 
+Wall time = 540 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 2 threads
+Thread # 1 out of 2 threads
+End task 0 :: j 10000000 k 10000000.000000
+End task 1 :: j 10000000 k 10000000.000000
+CPU time = 1077 ms 
+Wall time = 540 ms
+--> 1 threads before omp parallel.
+Thread # 0 out of 2 threads
+Thread # 1 out of 2 threads
+End task 1 :: j 10000000 k 10000000.000000
+End task 0 :: j 10000000 k 10000000.000000
+CPU time = 1082 ms 
+Wall time = 541 ms
