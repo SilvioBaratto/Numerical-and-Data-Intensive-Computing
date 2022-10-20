@@ -11,7 +11,7 @@
 #include <time.h>
 #include <omp.h>
 
-#define NUM_THREADS	2
+#define NUM_THREADS	4
 
 
 void main()
@@ -25,8 +25,10 @@ void main()
      
      	// pid is wrongly declared as shared in the parallel directive
 	
-	#pragma omp parallel shared( pid ) private( limit, i, j ) 
+	#pragma omp parallel shared(pid) firstprivate( limit, i, j ) 
 	{  
+		
+	   printf("\nlimit: %ld\n", limit);
 	   pid = omp_get_thread_num();    // Each thread modifies the shared variable 
 	   				  // on its own cache.					  
 	   printf("Start thread # %d :: initial limit %ld\n", pid, limit );

@@ -1,11 +1,28 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {section}{\numberline {1}PERF (I)}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Definition profiler}{2}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Code explanatin for benchmarking}{2}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Performance analysis tool (perf)}{2}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}Conclusion}{3}{subsection.1.4}%
-\contentsline {section}{\numberline {2}PERF (II)}{4}{section.2}%
-\contentsline {section}{\numberline {3}GPROF}{5}{section.3}%
-\contentsline {section}{\numberline {4}OpenMP (Compilation and basic directives)}{6}{section.4}%
-\contentsline {section}{\numberline {5}Optional assignment}{7}{section.5}%
+\contentsline {section}{\numberline {1}PERF (I)}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Definition profiler}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Code explanatin for benchmarking}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Performance analysis tool (perf)}{3}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Conclusion}{4}{subsection.1.4}%
+\contentsline {section}{\numberline {2}PERF (II)}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Program without optimization}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Program with optimization}{6}{subsection.2.2}%
+\contentsline {section}{\numberline {3}GPROF}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}self-explained "profile" file}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Bottlenecks and best candidates to parallelized}{7}{subsection.3.2}%
+\contentsline {section}{\numberline {4}OpenMP (Compilation and basic directives)}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}CPU information from the Linux kernel}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Number of cores and threads from internet}{8}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Program explanation}{8}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Benchmarks with multiple threads}{8}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Speedup and Efficiency}{9}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Task 2 program explanation}{9}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Program behaviour}{10}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Changing from "private" to "firstprivate"}{10}{subsection.4.8}%
+\contentsline {section}{\numberline {5}Optional assignment}{11}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Program task 3 explanation}{11}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Behaviour semaphores}{11}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Comment omp lock and omp unlock}{11}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Inserting barrier synchronization}{11}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}task 4}{12}{subsection.5.5}%

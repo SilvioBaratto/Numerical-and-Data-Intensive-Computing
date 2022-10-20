@@ -109,7 +109,7 @@ CPU = 664.648987 ms Mul1
        0.004007000 seconds sys
 
 
-Mul3 O3
+Mul2 O3
 
 CPU = 649.606018 ms Mul1 
 
@@ -127,6 +127,5 @@ CPU = 649.606018 ms Mul1
             60,033      LLC-store-misses                                              (22.11%)
 
        1.328076453 seconds time elapsed
-
        1.323980000 seconds user
        0.003999000 seconds sys

@@ -24,16 +24,17 @@ void main()
 	omp_init_lock( &sem1 );
 
   	
-	#pragma omp parallel for
+	#pragma omp parallel for reduction(+:k)
 	for (i=0; i<100000000; i++)
 	{
-       		omp_set_lock( &sem1 );   // wait
+       	// omp_set_lock( &sem1 );   // wait
 
-		// Critical region: One thread at a time		   	
+		// Critical region: One thread at a time	
+		
 		k++;
 
-           	omp_unset_lock( &sem1 ); // signal
-	   }
+        // omp_unset_lock( &sem1 ); // signal
+	}
 	
    	omp_destroy_lock( &sem1 );
 	

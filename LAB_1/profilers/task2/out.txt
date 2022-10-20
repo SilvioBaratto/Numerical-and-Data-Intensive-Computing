@@ -1,0 +1,17 @@
+ Performance counter stats for './task2':
+
+     6,310,120,365      cycles:u                                                      (33.08%)
+     8,153,007,933      instructions:u            #    1.29  insn per cycle           (44.27%)
+     3,030,668,604      L1-dcache-loads                                               (55.46%)
+     1,052,662,133      L1-dcache-load-misses     #   34.73% of all L1-dcache accesses  (66.65%)
+     1,018,844,667      L1-dcache-stores                                              (66.87%)
+   <not supported>      L1-dcache-store-misses                                      
+           439,854      LLC-loads                                                     (67.09%)
+             7,096      LLC-load-misses           #    1.61% of all LL-cache accesses  (44.54%)
+            20,576      LLC-stores                                                    (21.94%)
+               351      LLC-store-misses                                              (21.93%)
+
+       1.787987407 seconds time elapsed
+
+       1.784145000 seconds user
+       0.004000000 seconds sys

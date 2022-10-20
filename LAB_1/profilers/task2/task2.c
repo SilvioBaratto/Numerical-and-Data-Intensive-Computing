@@ -84,9 +84,9 @@ main()
 		
 	end_mul1 = clock();
 
-	Mul1(A, B, C2);
+	// Mul1(A, B, C2);
 
 	printf("Equal %d \n", Equal( C1, C2 ) );
 		
-	printf("CPU = %f ms Mul1 \n",  (float) (end_mul1-start_mul1)/CLOCKS_PER_SEC*1000);
+	printf("CPU = %f ms Mul2 \n",  (float) (end_mul1-start_mul1)/CLOCKS_PER_SEC*1000);
 }
