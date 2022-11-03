@@ -1,0 +1,62 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{pdfpages}
+\usepackage{eurosym}
+\usepackage{pgfplots}
+\usepackage{authblk}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{listings}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{letltxmacro}
+\usepackage{microtype}
+\usepackage[left=3cm,right=3cm,bottom=3.5cm]{geometry}
+\usepackage{emptypage}
+\usepackage{amsmath,amssymb,amsthm, latexsym}
+\usepackage[english,italian]{babel}
+\usepackage{url}
+\usepackage{caption}
+\usepackage{verbatim}
+\captionsetup{tableposition=top,figureposition=bottom,font=small,format=hang,labelfont={sf,bf}}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{listings}
+\usepackage{hyphenat}
+\usepackage{subfig}
+\pagestyle{empty}
+\newcommand\AlCentroPagina[1]{%
+\AddToShipoutPicture*{\AtPageCenter{%
+\makebox(0,0){\includegraphics%
+[width =0.9\paperwidth]{#1}}}}}
+
+\begin{document}
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+\lstset{language=Java} 
+\lstset{basicstyle=\footnotesize\ttfamily}
+\author{Silvio Baratto, Tobias Ganzmann}
+\title{
+\normalfont \normalsize 
+\href{https://github.com/SilvioBaratto/Numerical-and-Data-Intensive-Computing}{github.com/SilvioBaratto/Lab-1} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Report Lab 2\\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+\maketitle
+\tableofcontents
+\newpage
+
+\end{document}

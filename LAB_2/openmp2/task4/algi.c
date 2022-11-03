@@ -19,6 +19,8 @@
 
 #define THRESHOLD 20
 
+#define NUM_THREADS 8
+
 void Graylevel_Histogram( tGrayImage *src, int graylevels, int *histo );
 
 int ThresholdYellow;
@@ -85,6 +87,7 @@ void Binarize_Gray_Image( tGrayImage *src, tGrayPixel threshold, tGrayImage *dst
 	int r, c;
 	tGrayPixel pixel;
 
+	#pragma omp parallel for schedule(guided) collapse(2) private(r,c, pixel) 
 	for (r=0; r<src->rows; r++)
 	for (c=0; c<src->cols; c++)
 	{
@@ -105,6 +108,7 @@ void Or_Gray_Images( tGrayImage *src1, tGrayImage *src2, tGrayImage *dst )
 	int r, c;
 	tGrayPixel pixel1, pixel2;
 
+	#pragma omp parallel for schedule(guided) collapse(2) private(pixel1, pixel2)
 	for (r=0; r<src1->rows; r++)
 	for (c=0; c<src1->cols; c++)
 	{
@@ -225,6 +229,8 @@ void Graylevel_Histogram( tGrayImage *src, int graylevels, int *histo )
 	tGrayPixel pixel;
 	
 	for (i=0; i<graylevels; i++) histo[i] = 0;
+
+	#pragma omp parallel for schedule(guided) collapse(2) shared(histo) private(pixel)
 	for (r=0; r<src->rows; r++)
 	for (c=0; c<src->cols; c++)
 	{
@@ -248,11 +254,14 @@ void Conditional_Graylevel_Histogram( tGrayImage *src, tGrayImage *cnd, int gray
 	tGrayPixel pixel, flag;
 	
 	for (i=0; i<graylevels; i++) histo[i] = 0;
+
+	#pragma omp parallel for schedule(guided) collapse(2) private(r,c,pixel,flag, histo)
 	for (r=0; r<src->rows; r++)
 	for (c=0; c<src->cols; c++)
 	{
 		BMP_Read_Gray_Pixel( src, r, c, &pixel );
 		BMP_Read_Gray_Pixel( cnd, r, c, &flag );
+		
 		if (flag == 255) histo[ pixel ]++;
 	}
 }
@@ -277,6 +286,7 @@ void Sobel_Filter( tGrayImage *src, tGrayImage *dst )
 	min = HUGE_VAL;
 	max = 0;
 	
+	// #pragma omp parallel for schedule(guided) collapse(2)  private(r,c,tmp1,tmp2) 
 	for (r=1; r<src->rows-1; r++)
 	for (c=1; c<src->cols-1; c++)
 	{
@@ -310,6 +320,7 @@ void Sobel_Filter( tGrayImage *src, tGrayImage *dst )
 		if (sobel[r][c] < min) min = sobel[r][c];
 	}
 	
+	// #pragma omp parallel for schedule(guided) collapse(2) private(tmp, pixel) 
 	for (r=1; r<src->rows-1; r++)
 	for (c=1; c<src->cols-1; c++)
 	{
@@ -334,6 +345,7 @@ void Binary_Dilation( tGrayImage *src, tGrayImage *dst )
 	char flag;
 	tGrayPixel pixel;
 	
+	#pragma omp parallel for schedule(guided) collapse(2) private(r,c,pixel) 
 	for (r=0; r<src->rows; r++)
 	for (c=0; c<src->cols; c++)
 	{
@@ -383,6 +395,7 @@ void Binary_Erosion( tGrayImage *src, tGrayImage *dst )
 	char flag;
 	tGrayPixel pixel;
 	
+	#pragma omp parallel for schedule(guided) collapse(2) private(r, c, pixel) 
 	for (r=0; r<src->rows; r++)
 	for (c=0; c<src->cols; c++)
 	{
@@ -493,6 +506,8 @@ main( int argc, char **argv )
 	tColorPixel colpixel;
 	float ratio, mitja, sigma;
 
+	omp_set_num_threads( NUM_THREADS );
+
 	struct timespec ini, end, diff;
 
 	if (argc < 3) 
@@ -550,6 +565,7 @@ main( int argc, char **argv )
 
 	alga = malloc( n * sizeof(tAlga) );
 
+	#pragma omp parallel for shared(alga) schedule(guided)
 	for (i=0; i<n; i++)
 	{	
 		alga[i].area = 0;

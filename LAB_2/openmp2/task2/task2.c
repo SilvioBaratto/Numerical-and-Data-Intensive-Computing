@@ -11,7 +11,7 @@
 #include <stdlib.h>
 #include <omp.h>
 
-#define NUM_THREADS	1
+#define NUM_THREADS	2
 
 #define N	1000
 
@@ -49,14 +49,46 @@ void Mul1Par( char A[N][N], char B[N][N], int C[N][N] )
 {
 	int i, j, k;
 	
+	#pragma omp parallel for schedule(static)
+	for (i=0; i<N; i++){
+		for (j=0; j<N; j++){
+			C[i][j] = 0;
+			for (k=0; k<N; k++){
+				C[i][j] += A[i][k] * B[k][j];
+			}
+		}
+	}
+}
+
+void Mul2( char A[N][N], char B[N][N], int C[N][N] )
+{
+
+	int i, j, k;
+	
 	for (i=0; i<N; i++)
 	   for (j=0; j<N; j++)
 	   {
-	   	C[i][j] = 0;
-		
+	   	C[j][i] = 0;		
 	   	for (k=0; k<N; k++)
-	   		C[i][j] += A[i][k] * B[k][j];
+	   		C[j][i] += A[j][k] * B[k][i];
 	   }
+
+}
+
+void Mul2Par( char A[N][N], char B[N][N], int C[N][N] )
+{
+
+	int i, j, k;
+	
+	#pragma omp parallel for schedule(guided)
+	for (i=0; i<N; i++)
+		for (j=0; j<N; j++)
+		{
+			C[j][i] = 0;		
+			for (k=0; k<N; k++)
+				C[j][i] += A[j][k] * B[k][i];
+		}
+
 }
 
 
@@ -99,7 +131,7 @@ main()
 	
 	clock_gettime( CLOCK_REALTIME, &ini );
 	
-	Mul1Par( A, B, C1 );
+	Mul2Par( A, B, C1 );
 		
 	clock_gettime( CLOCK_REALTIME, &end );
 	diff = Diff_timespec( ini, end );

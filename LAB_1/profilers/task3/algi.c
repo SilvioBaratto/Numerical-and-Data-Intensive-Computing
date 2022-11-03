@@ -9,6 +9,7 @@
 /* This program detects the poruses of a membrane imaged by a
    scanning microscope */
    
+#include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -30,6 +31,18 @@ typedef struct
 	int rowmin, rowmax, colmin, colmax;
 } tAlga;
 
+struct timespec Diff_timespec(struct timespec start, struct timespec end)
+{
+	struct timespec temp;
+	if ((end.tv_nsec-start.tv_nsec)<0) {
+		temp.tv_sec = end.tv_sec-start.tv_sec-1;
+		temp.tv_nsec = 1000000000+end.tv_nsec-start.tv_nsec;
+	} else {
+		temp.tv_sec = end.tv_sec-start.tv_sec;
+		temp.tv_nsec = end.tv_nsec-start.tv_nsec;
+	}
+	return temp;
+}
 
 /* ==================================================== */
 /* =				Add_Color_Images			      = */
@@ -476,12 +489,16 @@ main( int argc, char **argv )
 	tColorPixel colpixel;
 	float ratio, mitja, sigma;
 
+	struct timespec ini, end, diff;
+
 	if (argc < 3) 
 	{
 		printf("Usage: algi channel1.bmp channel2.bmp [threshold]\n");
 		exit(-1);
 	}
 		
+	clock_gettime( CLOCK_REALTIME, &ini );
+
 	if (!BMP_Read_Color_Image( argv[1], &yellow ))
 	{
 		printf("ERROR: File cannot be opened %s\n", argv[1]);
@@ -493,6 +510,7 @@ main( int argc, char **argv )
 		printf("ERROR: File cannot be opened %s\n", argv[2]);
 		exit( -1 );
 	};
+	
 
 	if (argc == 4) ThresholdYellow = atoi(argv[3]);
 	else ThresholdYellow = THRESHOLD;
@@ -608,5 +626,20 @@ BMP_Write_Color_Image("joint.bmp", &redyellow );
 	BMP_Free_Gray_Image( &algues );
 	Destroy_Label_Array(  &Labels );
 	free( alga );
+	
+	clock_gettime( CLOCK_REALTIME, &end );
+	diff = Diff_timespec( ini, end );
+	printf("Wall time = %ld ms\n",  diff.tv_sec * 1000 + diff.tv_nsec/1000000 );	
+
 
 }
+
+
+
+
+
+
+
+
+
+

@@ -3,8 +3,9 @@
 #include <stdio.h>
 #include <omp.h>
 #include <math.h>
+#include <stdbool.h>
 
-#define NUM_THREADS	1
+#define NUM_THREADS	16
 
 #define FILENAME "mandel.ppm"
 
@@ -38,7 +39,7 @@ void dump_img( char *img, int w, int h, FILE *f )
 	int x, y;
 	int p;
 	int red, green, blue;
-	
+
 	for(y = 0; y < h; y++)
     	for(x = 0; x < w; x++)
 	{
@@ -84,36 +85,39 @@ int main(int argc, char *argv[])
     clock_gettime( CLOCK_REALTIME, &ini );
 
     //loop through every pixel
-    for(y = 0; y < h; y++)
-    for(x = 0; x < w; x++)
-    {
-        //calculate the initial real and imaginary part of z, based on the pixel location and zoom and position values
-    	pr = 1.5 * (x - w / 2) / (0.5 * zoom * w) + moveX;
-        pi = (y - h / 2) / (0.5 * zoom * h) + moveY;
-        newRe = newIm = oldRe = oldIm = 0; //these should start at 0,0
-        //"i" will represent the number of iterations
-        //start the iteration process
-        for(i = 0; i < maxIterations; i++)
-        {
-            //remember value of previous iteration
-            oldRe = newRe;
-            oldIm = newIm;
-            //the actual iteration, the real and imaginary part are calculated
-            newRe = oldRe * oldRe - oldIm * oldIm + pr;
-            newIm = 2 * oldRe * oldIm + pi;
-            //if the point is outside the circle with radius 2: stop
-            if((newRe * newRe + newIm * newIm) > 4) break;
-        }
+    #pragma omp parallel for schedule(static) collapse(2)
+    for(y = 0; y < h; y++){
+        for(x = 0; x < w; x++){       
+                //calculate the initial real and imaginary part of z, based on the pixel location and zoom and position values
+                pr = 1.5 * (x - w / 2) / (0.5 * zoom * w) + moveX;
+                pi = (y - h / 2) / (0.5 * zoom * h) + moveY;
+                newRe = newIm = oldRe = oldIm = 0; //these should start at 0,0
+                //"i" will represent the number of iterations
+                //start the iteration process
+                for(i = 0; i < maxIterations; i++)
+                {
+                    //remember value of previous iteration
+                    oldRe = newRe;
+                    oldIm = newIm;
+                    //the actual iteration, the real and imaginary part are calculated
+                    newRe = oldRe * oldRe - oldIm * oldIm + pr;
+                    newIm = 2 * oldRe * oldIm + pi;
+                    //if the point is outside the circle with radius 2: stop
+                    if((newRe * newRe + newIm * newIm) > 4){
+                        break;
+                    } 
+                }
 
-	if(i == maxIterations)
-        	color(img, w, x, y, 0, 0, 0); // black
-    	else
-    	{
-        	z = sqrt(newRe * newRe + newIm * newIm);
-        	brightness = 256. * log2(1.75 + i - log2(log2(z))) / log2((double)maxIterations);
-        	color(img, w, x, y, brightness, brightness, 255);
-    	}
-    }
+            if(i == maxIterations)
+                    color(img, w, x, y, 0, 0, 0); // black
+                else
+                {
+                    z = sqrt(newRe * newRe + newIm * newIm);
+                    brightness = 256. * log2(1.75 + i - log2(log2(z))) / log2((double)maxIterations);
+                    color(img, w, x, y, brightness, brightness, 255);
+                }
+            }
+        }
 
     clock_gettime( CLOCK_REALTIME, &end );
     diff = Diff_timespec( ini, end );  

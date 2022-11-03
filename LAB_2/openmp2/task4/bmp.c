@@ -9,6 +9,13 @@
 
 /* Basic set of uncompressed BMP functions */
 
+/* Function to parallelize:
+* BMP_Read_Gray_Pixel
+* BMP_Write_Gray_Pixel
+* BMP_Read_Color_Pixel
+* BMP_Write_Color_Pixel
+*/
+
 #include <stdio.h>
 #include <string.h>
 
@@ -18,6 +25,15 @@
 
 #include <math.h>
 #include "bmp.h"
+
+#define NUM_THREADS 
+
+/* Function to parallelize:
+* BMP_Read_Gray_Pixel [check]
+* BMP_Write_Gray_Pixel
+* BMP_Read_Color_Pixel
+* BMP_Write_Color_Pixel
+*/
 
 /* ============================================================	*/
 /* =			    Compute_Padding		      = */
@@ -322,9 +338,9 @@ int BMP_Read_Gray_Pixel( tGrayImage *image, int row, int col, tGrayPixel *value 
 {
 /* Return the value associated with the pixel located at the
    given row and column of the given gray image */
-   
-	if (row<0 || row >= image->rows || col<0 || col >= image->cols) 
+	if (row<0 || row >= image->rows || col<0 || col >= image->cols){
 		return( FALSE );
+	}
 	*value = image->image[ row * image->cols + col ];
 	return( TRUE );
 }
